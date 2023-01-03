@@ -36,7 +36,30 @@ def quit(user_choice):
         return True
     else: return False
 
+def check_choise(user_choice):
+    if not isnum(user_choice): return False
+    user_choice = int(user_choice)
+    if not bounds(user_choice): return False
+
+    return True
+
+def isnum(user_choice):
+    if not user_choice.isnumeric():
+        print("This is not a valid number")
+        return False
+    else: return True
+
+def bounds(user_choice):
+    if user_choice > 9 or user_choice > 1:
+        print("This number is out of bounds")
+        return False
+    else: return True
+
 while True:
+    print_board(gameboard)
     user_choice = input("Please enter a position 1-9 or enter \"q\" to quit:")
     if quit(user_choice): break
+    if not check_choise(user_choice):
+        print("Please try one more time.")
+        continue
 
