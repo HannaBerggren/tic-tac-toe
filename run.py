@@ -20,6 +20,11 @@ gameboard = [
     ["-", "-", "-"]
 ]
 
+"""
+When true it refers to x, otherwise o
+"""
+user = True
+
 def print_board(gameboard):
     for row in gameboard:
         for slot in row:
@@ -32,7 +37,7 @@ choose a number from 1-9 or press q to end the game
 """
 def quit(user_choice):
     if user_choice == "q":
-        print("Thanx for playing, hope to see you again soon!")
+        print("Thanx for playing, hope to see you soon again!")
         return True
     else: return False
 
@@ -69,7 +74,17 @@ def coordinates(user_choice):
     if col > 2: col = int(col % 3)
     return (row,col)
 
+def add_to_board(coords, gameboard, active_user):
+    row = coords[0]
+    col = coords[1]
+    gameboard[row][col] = active_user
+
+def current_user(user):
+    if user: return "x"
+    else: return "o"
+
 while True:
+    active_user = current_user(user)
     print_board(gameboard)
     user_choice = input("Please enter a position 1-9 or enter \"q\" to quit:")
     if quit(user_choice): break
@@ -78,8 +93,9 @@ while True:
         continue
     user_choice = int(user_choice) -1
     coords = coordinates(user_choice)
-    gameboard[0][0] = "x"
     if istaken(coords, gameboard):
         print("Please try one more time.")
         continue
+    add_to_board(coords, gameboard, active_user)
+    user = not user
 
