@@ -50,16 +50,36 @@ def isnum(user_choice):
     else: return True
 
 def bounds(user_choice):
-    if user_choice > 9 or user_choice > 1:
+    if user_choice > 9 or user_choice < 1:
         print("This number is out of bounds")
         return False
     else: return True
+
+def istaken(coords, gameboard):
+    row = coords[0]
+    col = coords[1]
+    if gameboard[row][col] != "-":
+        print("This position is already taken, please choose another one.")
+        return True
+    else: return False
+
+def coordinates(user_choice):
+    row = int(user_choice / 3)
+    col = user_choice
+    if col > 2: col = int(col % 3)
+    return (row,col)
 
 while True:
     print_board(gameboard)
     user_choice = input("Please enter a position 1-9 or enter \"q\" to quit:")
     if quit(user_choice): break
     if not check_choise(user_choice):
+        print("Please try one more time.")
+        continue
+    user_choice = int(user_choice) -1
+    coords = coordinates(user_choice)
+    gameboard[0][0] = "x"
+    if istaken(coords, gameboard):
         print("Please try one more time.")
         continue
 
