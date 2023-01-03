@@ -83,6 +83,20 @@ def current_user(user):
     if user: return "x"
     else: return "o"
 
+def iswin(user, gameboard):
+    if check_row(user, gameboard): return True
+
+def check_row(user, gameboard):
+    for row in gameboard:
+        complete_row = True
+        for slot in row:
+            if slot != user:
+                complete_row = False
+                break
+        if complete_row: return True
+    return False
+
+
 while True:
     active_user = current_user(user)
     print_board(gameboard)
@@ -91,11 +105,14 @@ while True:
     if not check_choise(user_choice):
         print("Please try one more time.")
         continue
-    user_choice = int(user_choice) -1
+    user_choice = int(user_choice) - 1
     coords = coordinates(user_choice)
     if istaken(coords, gameboard):
         print("Please try one more time.")
         continue
     add_to_board(coords, gameboard, active_user)
-    user = not user
+    if iswin(active_user, gameboard):
+        print(f"{active_user.upper()} won!")
+        break
 
+    user = not user
