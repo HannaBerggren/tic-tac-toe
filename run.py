@@ -86,6 +86,7 @@ def current_user(user):
 def iswin(user, gameboard):
     if check_row(user, gameboard): return True
     if check_col(user, gameboard): return True
+    if check_diag(user, gameboard): return True
     return False
 
 def check_row(user, gameboard):
@@ -107,6 +108,11 @@ def check_col(user, gameboard):
                 break
         if complete_col: return True
     return False
+
+def check_diag(user, gameboard):
+    if gameboard[0][0] == user and gameboard[1][1] == user and gameboard[2][2] == user: return True
+    elif gameboard[0][2] == user and gameboard[1][1] == user and gameboard[2][0] == user: return True
+    else: return False
 
 
 while True:
