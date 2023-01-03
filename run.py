@@ -24,6 +24,7 @@ gameboard = [
 When true it refers to x, otherwise o
 """
 user = True
+turns = 0
 
 def print_board(gameboard):
     for row in gameboard:
@@ -115,7 +116,7 @@ def check_diag(user, gameboard):
     else: return False
 
 
-while True:
+while turns < 9:
     active_user = current_user(user)
     print_board(gameboard)
     user_choice = input("Please enter a position 1-9 or enter \"q\" to quit:")
@@ -133,4 +134,6 @@ while True:
         print(f"{active_user.upper()} won!")
         break
 
+    turns += 1
+    if turns == 9: print("It's a Tie!")
     user = not user
