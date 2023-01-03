@@ -27,3 +27,16 @@ def print_board(gameboard):
         print()
 print_board(gameboard)
 
+"""
+choose a number from 1-9 or press q to end the game
+"""
+def quit(user_choice):
+    if user_choice == "q":
+        print("Thanx for playing, hope to see you again soon!")
+        return True
+    else: return False
+
+while True:
+    user_choice = input("Please enter a position 1-9 or enter \"q\" to quit:")
+    if quit(user_choice): break
+
