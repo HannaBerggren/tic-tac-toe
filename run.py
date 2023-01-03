@@ -85,6 +85,8 @@ def current_user(user):
 
 def iswin(user, gameboard):
     if check_row(user, gameboard): return True
+    if check_col(user, gameboard): return True
+    return False
 
 def check_row(user, gameboard):
     for row in gameboard:
@@ -94,6 +96,16 @@ def check_row(user, gameboard):
                 complete_row = False
                 break
         if complete_row: return True
+    return False
+
+def check_col(user, gameboard):
+    for col in range(3):
+        complete_col = True
+        for row in range(3):
+            if gameboard[row][col] != user:
+                complete_col = False
+                break
+        if complete_col: return True
     return False
 
 
