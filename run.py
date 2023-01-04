@@ -31,7 +31,7 @@ def print_board(gameboard):
         for slot in row:
             print(f"{slot} ", end="")
         print()
-print_board(gameboard)
+
 
 """
 choose a number from 1-9 or press q to end the game
