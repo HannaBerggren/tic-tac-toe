@@ -111,8 +111,10 @@ def check_col(user, gameboard):
     return False
 
 def check_diag(user, gameboard):
-    if gameboard[0][0] == user and gameboard[1][1] == user and gameboard[2][2] == user: return True
-    elif gameboard[0][2] == user and gameboard[1][1] == user and gameboard[2][0] == user: return True
+    if gameboard[0][0] == user and gameboard[1][1] == user and gameboard[2][2] == user: 
+        return True
+    elif gameboard[0][2] == user and gameboard[1][1] == user and gameboard[2][0] == user: 
+        return True
     else: return False
 
 
