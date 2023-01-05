@@ -105,7 +105,7 @@ Here's what the program does and how the game plays:
 ### Future features
 ---
 - Give an option to the user to choose the symbol they want.
-- Let user dicide if they want to go first or second.
+- Let user decide if they want to go first or second.
 - Online multiplayer: the ability to play online with friends.
 - Improve the computer difficulties in different levels: easy, intermediate and hard.
 &nbsp;
@@ -136,7 +136,12 @@ The code was checked with PEP8 validator and passed with no error found.
 ![Pep8](assets/pictures/pep.png)
 
 ### Manual testing
-All features have been tested manually with a MacBook Air and a Chromebook with multiple browsers (Chrome, Safari, Firefox).
+- All features have been tested manually with a MacBook Air and a Chromebook with multiple browsers (Chrome, Safari, Firefox).
+- Family and friends tested for functionality.
+- Tested all scenarios, to win, to get the computer to win, to get a tie.
+- Tested writing different letters and symbols.
+- Tested to write different numbers then 1-9.
+
 
 &nbsp;
 
