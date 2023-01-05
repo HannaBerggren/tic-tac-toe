@@ -40,9 +40,9 @@
 ---
 
 ### Website owners goals
-- To offer entertainment to the user willing to play the game.
+- To offer entertainment to the user who wants to play the game.
 - Provide simple information about the game.
-- Provide options to the user to continue or to quit during the entire game.
+- Provide options to the user, to continue or to quit during the entire game.
 
 &nbsp;
 
@@ -50,11 +50,11 @@
 For new users:
 - To play a game of Tic Tac Toe against the computer.
 - To easily navigate in commands and interface.
-- To always have reference navigation commands always available.
+- To always have reference navigation commands available.
 
 Returning visitors:
 - To practice their Tic Tac Toe skills playing against the computer.
-- To be able to play Tic Tac Toe as many times as they want
+- To be able to play Tic Tac Toe as many times as they want.
 
 &nbsp;
 
@@ -179,11 +179,11 @@ To deploy this page to Heroku from its [GitHub repository](https://github.com/Ha
 - Enter your app name in the first field, the names must be unique so check that then name you have chosen is available on Heroku, then select your region.
 - Click on **Create App**.
 - Once the app is created you will see the Overview panel of the application. Now move to the **Settings** tab.
-- Once you are in the **Settings** tab scroll down till you find **Config Vars**.
+- Once you are in scroll down till you find **Config Vars**.
 - Press the button **Reveal Config Vars** and for 'KEY' field, type in 'PORT' and for the value field type in '8000'.
 Then press the **Add** button.
 - Scroll down to **Buildpacks**. Click the button **Add buildpack** and select 'python'. Do the same step and add 'node.js'.
-**PYTHON must be on top of the buildpacks. If in your case NODE.JS is first, click and drag PYTHON to the top and save.**
+**Python must be on top of the buildpacks. If in your case NODE.JS is first, click and drag Python to the top and save.**
 - Return back to the **Deploy** tab. From the deployment method, select 'Github' as the deployment.
 - You will be asked to connect your github account. Confirm and proceed.
 - Search for your repository name and connect.
