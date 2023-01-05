@@ -123,7 +123,7 @@ def iswin(user, gameboard):
     return False
 
 """
-check rows, columns and diagonal
+check rows
 """
 def check_row(user, gameboard):
     for row in gameboard:
@@ -136,7 +136,9 @@ def check_row(user, gameboard):
             return True
     return False
 
-
+"""
+check columns
+"""
 def check_col(user, gameboard):
     for col in range(3):
         complete_col = True
@@ -148,7 +150,9 @@ def check_col(user, gameboard):
             return True
     return False
 
-
+"""
+check diagonal
+"""
 def check_diag(user, gameboard):
     if (gameboard[0][0] == user and
        gameboard[1][1] == user and gameboard[2][2] == user):
@@ -159,7 +163,9 @@ def check_diag(user, gameboard):
     else:
         return False
 
-
+"""
+loop that runs the game
+"""
 while turns < 9:
     active_user = current_user(user)
     print_board(gameboard)
