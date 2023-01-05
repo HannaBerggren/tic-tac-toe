@@ -1,15 +1,15 @@
 # TIC TAC TOE
 ### Play the classic game of Tic Tac Toe. A game for two players who take turns marking the spaces in a three-by-three grid with X's or O's. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner!
-
 &nbsp;
+![Game](assets/pictures/game.png)
 
 ## Live Site
 ---
-[Live Heroku](https://tic-tac-toe-third-port-project.herokuapp.com/)
+[Heroku](https://tic-tac-toe-third-port-project.herokuapp.com/)
 
 ## Repository
 ---
-
+[Github](https://github.com/HannaBerggren/tic-tac-toe)
 &nbsp;
 
 ## Table of Contents
@@ -108,7 +108,6 @@ Here's what the program does and how the game plays:
 - Let user dicide if they want to go first or second.
 - Online multiplayer: the ability to play online with friends.
 - Improve the computer difficulties in different levels: easy, intermediate and hard.
-
 &nbsp;
 
 [Back to Table of contents](#table-of-contents)
@@ -118,8 +117,8 @@ Here's what the program does and how the game plays:
 ## Technologies Used
 ---
 
-- Python
-
+- Python: Python was the language used throughout the project.
+- Markdown: Markdown language was used troughout writing the README.md
 &nbsp;
 
 [Back to Table of contents](#table-of-contents)
@@ -132,8 +131,9 @@ Here's what the program does and how the game plays:
 
 ### PEP8
 The code was checked with PEP8 validator and passed with no error found.
-
 &nbsp;
+
+![Pep8](assets/pictures/pep.png)
 
 ### Manual testing
 All features have been tested manually with a MacBook Air and a Chromebook with multiple browsers (Chrome, Safari, Firefox).
@@ -150,11 +150,14 @@ For new users and returning visitors:
 - The user can improve their skill at the game excercising with this program which puts them against the computer.
 - The user can navigate through the game with easy commands.
 - Always available reference of the possible choices when making a move, makes it easy to find the right commands.
+&nbsp;
 
+[Back to Table of contents](#table-of-contents)
 &nbsp;
 
 ### Bugs
 - When starting the game it showed two gameboards, fixed it by removing a print statement of the gameboard that was one to much. 
+- Some lines were too long and there was too little space between functions. I also removed multiple whitespaces.
 
 &nbsp;
 
@@ -180,7 +183,7 @@ To deploy this page to Heroku from its [GitHub repository](https://github.com/Ha
 - Press the button **Reveal Config Vars** and for 'KEY' field, type in 'PORT' and for the value field type in '8000'.
 Then press the **Add** button.
 - Scroll down to **Buildpacks**. Click the button **Add buildpack** and select 'python'. Do the same step and add 'node.js'.
-**PYTHON MUST BE ON TOP OF THE BUILDPACKS. IF IN YOUR CASE NODE.JS IS FIRST, CLICK AND DRAG PYTHON TO TOP AND SAVE.**
+**PYTHON must be on top of the buildpacks. If in your case NODE.JS is first, click and drag PYTHON to the top and save.**
 - Return back to the **Deploy** tab. From the deployment method, select 'Github' as the deployment.
 - You will be asked to connect your github account. Confirm and proceed.
 - Search for your repository name and connect.
@@ -201,7 +204,7 @@ Then press the **Add** button.
 - Youtube - for great inspiration!
 - [Stackoverflow](https://stackoverflow.com/)
 - [W3 Schools](https://www.w3schools.com/)
-- My cousin - for her support!
+- My cousin - for her great support!
 
 &nbsp;
 
