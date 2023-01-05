@@ -21,7 +21,7 @@ gameboard = [
 ]
 
 """
-When true it refers to x, otherwise o
+when true it refers to x, otherwise o
 """
 user = True
 turns = 0
@@ -56,6 +56,9 @@ def check_choise(user_choice):
 
     return True
 
+"""
+to check if the user choose a valid number
+"""
 
 def isnum(user_choice):
     if not user_choice.isnumeric():
@@ -64,6 +67,10 @@ def isnum(user_choice):
     else:
         return True
 
+"""
+to see that the number is within the limit
+and not already taken
+"""
 
 def bounds(user_choice):
     if user_choice > 9 or user_choice < 1:
@@ -103,7 +110,9 @@ def current_user(user):
     else:
         return "o"
 
-
+"""
+to see who the winner is
+"""
 def iswin(user, gameboard):
     if check_row(user, gameboard):
         return True
@@ -113,7 +122,9 @@ def iswin(user, gameboard):
         return True
     return False
 
-
+"""
+check rows, columns and diagonal
+"""
 def check_row(user, gameboard):
     for row in gameboard:
         complete_row = True
